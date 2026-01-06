@@ -5,32 +5,32 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Primary Colors - Warm Teal Blue (Calming & Inviting) */
-  --color-primary: #3D6B7D;
-  --color-primary-dark: #2D5466;
-  --color-primary-light: #4D8294;
+  /* Primary Colors - Balanced Blue-Teal */
+  --color-primary: #2E7189;
+  --color-primary-dark: #245A6E;
+  --color-primary-light: #3A8BA0;
 
   /* Secondary Colors - Warm Terracotta/Gold Accents */
-  --color-secondary: #C9A66B;
-  --color-secondary-light: #E5D4B3;
-  --color-secondary-dark: #A88B52;
+  --color-secondary: #D4B176;
+  --color-secondary-light: #EDE0C8;
+  --color-secondary-dark: #B89858;
 
-  /* Neutral Colors - Warm Creams & Earth Tones */
-  --color-cream: #FDF8F3;
-  --color-cream-dark: #F5EDE3;
+  /* Neutral Colors - Warmer Cream (more distinct from white) */
+  --color-cream: #FFF8F0;
+  --color-cream-dark: #F5EBE0;
   --color-white: #FFFFFF;
   --color-text: #2D3B3F;
   --color-text-light: #4A5D62;
-  --color-text-muted: #6B7D82;
+  --color-text-muted: #7A8C91;
 
   /* Accent Colors */
-  --color-gold: #C9A962;
-  --color-gold-light: #E8DCC4;
+  --color-gold: #D4B46D;
+  --color-gold-light: #F0E5D2;
 
-  /* Gradients - Softer, warmer feel */
+  /* Gradients - Brighter, lighter feel */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   --gradient-warm: linear-gradient(135deg, var(--color-secondary-light) 0%, var(--color-cream) 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(61, 107, 125, 0.92) 0%, rgba(45, 84, 102, 0.95) 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(53, 127, 154, 0.95) 0%, rgba(42, 106, 130, 0.97) 100%);
 
 
 
@@ -72,7 +72,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 0 40px rgba(30, 77, 123, 0.3);
+  --shadow-glow: 0 0 40px rgba(53, 127, 154, 0.3);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -244,7 +244,7 @@ p {
 
 .btn--primary:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-xl), 0 0 60px rgba(30, 77, 123, 0.4);
+  box-shadow: var(--shadow-xl), 0 0 60px rgba(53, 127, 154, 0.4);
 }
 
 .btn--secondary {
@@ -932,7 +932,7 @@ p {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
 }
 
 .form-group textarea {
