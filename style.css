@@ -5,10 +5,10 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Primary Colors - Warm Sage Green (Calming & Nurturing) */
-  --color-primary: #4A6B5D;
-  --color-primary-dark: #3A5549;
-  --color-primary-light: #5D8572;
+  /* Primary Colors - Warm Teal Blue (Calming & Inviting) */
+  --color-primary: #3D6B7D;
+  --color-primary-dark: #2D5466;
+  --color-primary-light: #4D8294;
 
   /* Secondary Colors - Warm Terracotta/Gold Accents */
   --color-secondary: #C9A66B;
@@ -19,9 +19,9 @@
   --color-cream: #FDF8F3;
   --color-cream-dark: #F5EDE3;
   --color-white: #FFFFFF;
-  --color-text: #2D3B36;
-  --color-text-light: #4A5D55;
-  --color-text-muted: #6B7D74;
+  --color-text: #2D3B3F;
+  --color-text-light: #4A5D62;
+  --color-text-muted: #6B7D82;
 
   /* Accent Colors */
   --color-gold: #C9A962;
@@ -30,7 +30,8 @@
   /* Gradients - Softer, warmer feel */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   --gradient-warm: linear-gradient(135deg, var(--color-secondary-light) 0%, var(--color-cream) 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(74, 107, 93, 0.92) 0%, rgba(58, 85, 73, 0.95) 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(61, 107, 125, 0.92) 0%, rgba(45, 84, 102, 0.95) 100%);
+
 
 
   /* Typography */

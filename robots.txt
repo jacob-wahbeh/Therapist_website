@@ -1,0 +1,6 @@
+# Robots.txt for jacobsadan.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jacobsadan.com/sitemap.xml
