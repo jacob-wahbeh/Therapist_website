@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Watch Jacob Sadan's media appearances on talk shows and news programs discussing mental health, therapy, and faith.">
+    <meta name="keywords" content="Jacob Sadan media, therapist interview, mental health news, psychology podcast">
+    <title>Media Appearances | Jacob Sadan Therapy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <style>
+        /* Additional styles for media page */
+        .media-section {
+            padding: var(--space-2xl) 0;
+        }
+
+        .media-section:first-of-type {
+            padding-top: 0;
+        }
+
+        .media-section__header {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .media-section__title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        .media-section__icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-md);
+            color: var(--color-white);
+            flex-shrink: 0;
+        }
+
+        .featured-media {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .featured-media__main {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .featured-media__video {
+            aspect-ratio: 16/9;
+            width: 100%;
+        }
+
+        .featured-media__video .photo-placeholder {
+            width: 100%;
+            height: 100%;
+        }
+
+        .featured-media__info {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-media__badge {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-md);
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-lg);
+            width: fit-content;
+        }
+
+        .featured-media__title {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-md);
+        }
+
+        .featured-media__meta {
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .featured-media__description {
+            color: var(--color-text-light);
+            margin-bottom: var(--space-xl);
+        }
+
+        .podcast-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .podcast-item {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            gap: var(--space-lg);
+            align-items: center;
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+
+        .podcast-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .podcast-item__image {
+            width: 120px;
+            height: 120px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .podcast-item__image .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-md);
+        }
+
+        .podcast-item__content h4 {
+            margin-bottom: var(--space-xs);
+        }
+
+        .podcast-item__content p {
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-sm);
+        }
+
+        .podcast-item__content .subtitle {
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+
+        .podcast-item__play {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            color: var(--color-white);
+            flex-shrink: 0;
+            transition: all var(--transition-base);
+        }
+
+        .podcast-item:hover .podcast-item__play {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 1024px) {
+            .featured-media {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .podcast-item {
+                grid-template-columns: 80px 1fr;
+                gap: var(--space-md);
+            }
+
+            .podcast-item__image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .podcast-item__play {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header header--transparent">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__logo">Jacob <span>Sadan</span></a>
+
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About & Method</a></li>
+                    <li><a href="media.html" class="nav__link nav__link--active">Media</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__cta">
+                        <a href="contact.html#schedule" class="btn btn--secondary">Book Session</a>
+                    </li>
+                </ul>
+
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Media Appearances</h1>
+                <p>Featured discussions on mental health, therapy, and faith in the modern world</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section section--cream">
+        <div class="container">
+            <div class="text-center fade-in" style="padding: var(--space-4xl) 0;">
+                <div
+                    style="width: 100px; height: 100px; margin: 0 auto var(--space-xl); background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24"
+                        stroke="white">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h2>Media Content Coming Soon</h2>
+                <p class="text-muted"
+                    style="font-size: var(--text-lg); max-width: 600px; margin: var(--space-lg) auto;">
+                    I'm excited to share upcoming interviews, podcast appearances, and articles discussing
+                    mental health, therapy, and faith. Check back soon for new content!
+                </p>
+                <p
+                    style="color: var(--color-primary); font-size: var(--text-lg); font-style: italic; margin-top: var(--space-xl);">
+                    Interested in having me as a guest on your show or podcast?
+                </p>
+                <a href="contact.html" class="btn btn--primary" style="margin-top: var(--space-lg);">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-banner__content fade-in">
+                <h2>Let's Work Together</h2>
+                <p>
+                    Interested in having Jacob as a guest on your show or podcast?
+                    Or ready to begin your own healing journey?
+                </p>
+                <a href="contact.html#schedule" class="btn btn--cta">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <h3>Jacob Sadan</h3>
+                    <p>"Real Therapy for Real Life"</p>
+                    <p style="margin-top: var(--space-md);">
+                        Licensed Psychotherapist specializing in ISTDP and faith-integrated therapy.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__title">Navigation</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About & Method</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html#istdp">ISTDP Therapy</a></li>
+                        <li><a href="about.html#faith">Faith-Integrated Therapy</a></li>
+                        <li><a href="contact.html">Individual Sessions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__title">Connect</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html#schedule">Book Appointment</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 Jacob Sadan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
