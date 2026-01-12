@@ -330,18 +330,44 @@
     <section class="section section--cream">
         <div class="container">
 
-            <!-- Schedule Section -->
-            <div id="schedule" class="schedule-hero fade-in">
-                <h2>Schedule Your First Appointment</h2>
+            <!-- Combined Schedule & Contact Section -->
+            <div id="contact-form" class="schedule-hero fade-in" style="padding-bottom: var(--space-xl);">
+                <h2>Get in Touch & Schedule</h2>
                 <p>
-                    Taking the first step is often the hardest part. I'm here to make it as easy as possible
-                    for you to begin your journey toward healing and growth.
+                    To schedule an appointment, inquire about therapy options, or for any other assistance, please send
+                    a message.
                 </p>
-                <a href="mailto:jacobsadantherapy@gmail.com" class="btn btn--cta">Get in Touch</a>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="fade-in" style="max-width: 600px; margin: 0 auto;">
+                <form class="form" id="contact-form-element"
+                    style="background: var(--color-white); padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Tell me a bit about what brings you to therapy..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+                </form>
             </div>
 
             <!-- Contact Cards -->
-            <div class="contact-cards fade-in">
+            <div class="contact-cards fade-in" style="margin-top: var(--space-2xl);">
                 <div class="contact-card">
                     <div class="contact-card__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -530,22 +556,46 @@
         });
 
         // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
+        const contactForm = document.getElementById('contact-form-element');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
 
-            // Here you would typically send the form data to a server
-            // For now, we'll just show a success message
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
 
-            this.innerHTML = `
-        <div class="form-success">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h3>Thank You!</h3>
-          <p>Your message has been sent successfully. I'll get back to you within 24-48 hours.</p>
-        </div>
-      `;
-        });
+                try {
+                    const formData = new FormData(this);
+
+                    const response = await fetch('https://contact-form-worker.jacobewahbeh.workers.dev', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        this.innerHTML = `
+                            <div class="form-success">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <h3>Thank You!</h3>
+                                <p>Your message has been sent successfully. I'll get back to you within 24-48 hours.</p>
+                            </div>
+                        `;
+                    } else {
+                        throw new Error('Failed to send');
+                    }
+                } catch (error) {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    alert('There was an error sending your message. Please try again or email directly at jacobsadantherapy@gmail.com');
+                }
+            });
+        }
     </script>
 </body>
 
