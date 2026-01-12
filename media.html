@@ -240,7 +240,7 @@
                     <li><a href="media.html" class="nav__link nav__link--active">Media</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
                     <li class="nav__cta">
-                        <a href="contact.html#schedule" class="btn btn--secondary">Book Session</a>
+                        <a href="contact.html#contact-form" class="btn btn--secondary">Book Session</a>
                     </li>
                 </ul>
 
@@ -267,7 +267,7 @@
     <section class="section section--cream">
         <div class="container">
 
-            <!-- Featured TV Appearances -->
+            <!-- TV News Appearances -->
             <div class="media-section fade-in">
                 <div class="media-section__header">
                     <div class="media-section__title">
@@ -283,113 +283,123 @@
                     <p class="text-muted">Featured discussions on mental health topics with San Diego news stations</p>
                 </div>
 
-                <!-- Video Embeds Grid -->
+                <!-- TV News Grid (2 videos side by side) -->
                 <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-xl); margin-top: var(--space-xl);">
+                    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); margin-top: var(--space-xl);">
 
                     <!-- FOX 5 Mental Health Interview -->
-                    <div class="media-card" style="overflow: visible;">
-                        <div
-                            style="background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                <iframe
-                                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fsharpmesavista%2Fvideos%2F1381409376975729%2F&show_text=false&width=560&t=0"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                                    scrolling="no" frameborder="0" allowfullscreen="true"
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                                </iframe>
-                            </div>
-                            <div style="padding: var(--space-lg);">
-                                <p
-                                    style="font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-xs);">
-                                    FOX 5 San Diego</p>
-                                <h4 style="margin-bottom: var(--space-sm);">Destigmatizing Mental Health</h4>
-                                <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Mental Illness
-                                    Awareness Week</p>
-                                <p
-                                    style="font-size: var(--text-sm); color: var(--color-text-light); margin-top: var(--space-sm);">
-                                    Discussion on the importance of destigmatizing mental health and ways to get help if
-                                    you are struggling.
-                                </p>
-                            </div>
+                    <div
+                        style="background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe
+                                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fsharpmesavista%2Fvideos%2F1381409376975729%2F&show_text=false&width=560&t=0"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                scrolling="no" frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                        </div>
+                        <div style="padding: var(--space-lg);">
+                            <p
+                                style="font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-xs);">
+                                FOX 5 San Diego</p>
+                            <h4 style="margin-bottom: var(--space-sm);">Destigmatizing Mental Health</h4>
+                            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Mental Illness
+                                Awareness Week</p>
                         </div>
                     </div>
 
                     <!-- KUSI News Grief Interview -->
-                    <div class="media-card" style="overflow: visible;">
-                        <div
-                            style="background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                <iframe
-                                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fsharpmesavista%2Fvideos%2F1346899470197511%2F&show_text=false&width=560&t=0"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                                    scrolling="no" frameborder="0" allowfullscreen="true"
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                                </iframe>
-                            </div>
-                            <div style="padding: var(--space-lg);">
-                                <p
-                                    style="font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-xs);">
-                                    KUSI News</p>
-                                <h4 style="margin-bottom: var(--space-sm);">Understanding and Coping with Grief</h4>
-                                <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Grief Awareness
-                                    Day</p>
-                                <p
-                                    style="font-size: var(--text-sm); color: var(--color-text-light); margin-top: var(--space-sm);">
-                                    Interview on identifying grief and healthy ways to cope with loss.
-                                </p>
-                            </div>
+                    <div
+                        style="background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe
+                                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fsharpmesavista%2Fvideos%2F1346899470197511%2F&show_text=false&width=560&t=0"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                scrolling="no" frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                        </div>
+                        <div style="padding: var(--space-lg);">
+                            <p
+                                style="font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-xs);">
+                                KUSI News</p>
+                            <h4 style="margin-bottom: var(--space-sm);">Understanding and Coping with Grief</h4>
+                            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Grief Awareness Day
+                            </p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <!-- Instagram Section -->
+            <!-- Podcasts & Interviews Section -->
             <div class="media-section fade-in" style="margin-top: var(--space-3xl);">
                 <div class="media-section__header">
                     <div class="media-section__title">
                         <div class="media-section__icon"
-                            style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                             </svg>
                         </div>
-                        <h2>Social Media</h2>
+                        <h2>Podcasts & Interviews</h2>
                     </div>
-                    <p class="text-muted">Quick insights and mental health tips</p>
+                    <p class="text-muted">In-depth conversations about faith, therapy, and mental health</p>
                 </div>
 
-                <div style="display: flex; justify-content: center; margin-top: var(--space-xl);">
+                <!-- Podcasts Grid -->
+                <div
+                    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); margin-top: var(--space-xl); align-items: start;">
+
+                    <!-- YouTube Podcast -->
                     <div
-                        style="background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); max-width: 400px;">
-                        <blockquote class="instagram-media" data-instgrm-captioned
+                        style="background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe src="https://www.youtube.com/embed/oxJ03h81-jk"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                frameborder="0" allowfullscreen
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                            </iframe>
+                        </div>
+                        <div style="padding: var(--space-lg);">
+                            <p
+                                style="font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-xs);">
+                                The Christian G Podcast</p>
+                            <h4 style="margin-bottom: var(--space-sm);">The Sin Episode</h4>
+                            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">YouTube</p>
+                        </div>
+                    </div>
+
+                    <!-- KPBS Instagram Interview -->
+                    <div
+                        style="background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <blockquote class="instagram-media"
                             data-instgrm-permalink="https://www.instagram.com/reel/DSaf9uqiT1G/"
                             data-instgrm-version="14"
-                            style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; max-width:400px; min-width:326px; padding:0; width:calc(100% - 2px);">
+                            style="background:#FFF; border:0; margin: 0; padding:0; width:100%;">
                         </blockquote>
+                        <div style="padding: var(--space-lg);">
+                            <p
+                                style="font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin-bottom: var(--space-xs);">
+                                KPBS Midday Edition</p>
+                            <h4 style="margin-bottom: var(--space-sm);">Navigating Holiday Stress</h4>
+                            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">FM 89.5 San Diego</p>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Media Inquiry CTA -->
-            <div class="text-center fade-in"
-                style="margin-top: var(--space-3xl); padding: var(--space-2xl); background: var(--color-white); border-radius: var(--radius-xl);">
-                <h3>Media Inquiries</h3>
-                <p class="text-muted" style="max-width: 500px; margin: var(--space-md) auto;">
-                    Interested in having me as a guest on your show, podcast, or publication? I would love to discuss
-                    mental health topics with your audience.
-                </p>
-                <a href="contact.html" class="btn btn--primary" style="margin-top: var(--space-lg);">Get in Touch</a>
+                </div>
+
             </div>
+        </div>
+
+        <!-- Instagram Embed Script -->
+        <script async src="//www.instagram.com/embed.js"></script>
 
         </div>
     </section>
 
-    <!-- Instagram Embed Script -->
-    <script async src="//www.instagram.com/embed.js"></script>
 
     <!-- CTA Banner -->
     <section class="cta-banner">
@@ -400,7 +410,8 @@
                     Interested in having Jacob as a guest on your show or podcast?
                     Or ready to begin your own healing journey?
                 </p>
-                <a href="contact.html#schedule" class="btn btn--cta">Get in Touch</a>
+                <a href="contact.html#contact-form" class="btn btn--cta">Get in
+                    Touch</a>
             </div>
         </div>
     </section>
@@ -413,7 +424,7 @@
                     <h3>Jacob Sadan</h3>
                     <p>"Real Therapy for Real Life"</p>
                     <p style="margin-top: var(--space-md);">
-                        Licensed Psychotherapist specializing in ISTDP and faith-integrated therapy.
+                        Associate Therapist
                     </p>
                 </div>
 
@@ -439,14 +450,15 @@
                 <div>
                     <h4 class="footer__title">Connect</h4>
                     <ul class="footer__links">
-                        <li><a href="contact.html#schedule">Book Appointment</a></li>
+                        <li><a href="contact.html#contact-form">Book
+                                Appointment</a></li>
                         <li><a href="contact.html">Get in Touch</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2025 Jacob Sadan. All rights reserved.</p>
+                <p>&copy; 2026 Jacob Sadan. All rights reserved.</p>
             </div>
         </div>
     </footer>
