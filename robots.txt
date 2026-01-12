@@ -1,6 +1,6 @@
-# Robots.txt for jacob-wahbeh.github.io/Therapist_website
+# Robots.txt for jacobsadan.com
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://jacob-wahbeh.github.io/Therapist_website/sitemap.xml
+Sitemap: https://jacobsadan.com/sitemap.xml
